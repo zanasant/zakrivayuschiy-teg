@@ -26,7 +26,7 @@
             <button
               type="button"
               data-theme="dark"
-              class="button theme-menu__button"
+              class="theme-menu__button"
             >
               Темно
             </button>
@@ -36,7 +36,7 @@
               type="button"
               data-theme="auto"
               disabled
-              class="button theme-menu__button"
+              class="theme-menu__button"
             >
               Авто
             </button>
@@ -45,7 +45,7 @@
             <button
               type="button"
               data-theme="light"
-              class="button theme-menu__button"
+              class="theme-menu__button"
             >
               Светло
             </button>
@@ -55,6 +55,7 @@
     </header>
     <main>
       <section class="content card">
+        <article>
         <h2 class="subtitle">
           Фритрек и нулевой спринт: Подготовка&nbsp;к&nbsp;работе
         </h2>
@@ -64,7 +65,7 @@
           alt="Небольшой грузовик в фиолетовых тонах едет ночью"
           loading="lazy"
         />
-        <article>
+   
           <p class="content__paragraph">
             Это было самое начало пути. На этом этапе важно было проникнуться
             основами и настроиться на учёбу. И, возможно, подумать, как новые
@@ -74,8 +75,7 @@
             Место для ваших воспоминаний о начале обучения.
           </p>
         </article>
-        <ul class="like-button">
-          <li>
+        <div class="like-button">
             <button type="button" class="button card__icon-button">
               <svg
                 class="like-icon"
@@ -109,25 +109,25 @@
                 />
               </svg>
             </button>
-          </li>
-          <li>
+
             <button type="button" class="button card__like-button">
               <span class="button__text">Like</span>
             </button>
           </li>
-        </ul>
+        </div>
       </section>
-    </main>
-    <footer class="footer">
-      <button class="button footer__button" type="button">
-        <svg class="footer__floppy" viewBox="0 0 28 28">
+
+    <div class ="save">
+       <button class="button save__button" type="button">
+        <svg class="save__floppy" viewBox="0 0 28 28">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
-        <span class="button__text footer__button-text"
-          >Сохранить на память</span
+        <span class="button__text save__button-text"
+          >Сохранить на&nbsp;память</span
         >
       </button>
-    </footer>
+    </div>
+    </main>
     <script src="./scripts/set-theme.js"></script>
     <script src="./scripts/like.js"></script>
   </body>
