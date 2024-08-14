@@ -232,7 +232,6 @@
   padding: 10px 22px;
   margin-right: 2px;
   margin-bottom: 4px;
-
 }
 
 .button:focus {
@@ -352,5 +351,3 @@
   position: relative;
   z-index: 1;
 }
-
-
