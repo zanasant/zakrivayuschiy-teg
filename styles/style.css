@@ -21,9 +21,8 @@
   font-variation-settings: "wght" var(--text-weight, 400);
   background-color: var(--bg-color, #fff);
   color: var(--accent-color, #000);
-  background-image: var(--bg-image);
-  background-attachment: fixed;
-  background-repeat: repeat;
+  background-image: var(--bg-image-gradient);
+  background-size: cover;
 }
 
 .button {
@@ -50,6 +49,12 @@
   font-weight: var(--text-weight, 400);
   text-align: center;
   outline: 2px solid var(--accent-color, #000);
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .card {
@@ -165,11 +170,13 @@
 
 .theme-menu__item:hover {
   color: var(--accent-color-focus, rgba(0, 0, 0, 0.6));
+  transition: color 0.3s;
   transition-timing-function: ease;
 }
 
 .theme-menu__item:disabled {
   transition-timing-function: ease;
+  transition: color 0.3s;
   pointer-events: none;
 }
 
@@ -191,6 +198,37 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
+  border: 2px solid var(--accent-color, #000);
+}
+
+.card__label {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  font-family: var(--accent-font, monospace);
+  font-variation-settings: "wght" var(--text-weight, 400);
+  font-size: 14px;
+  line-height: 14px;
+  top: 30px;
+  right: 27px;
+  color: var(--accent-color);
+  opacity: 50%;
+  text-shadow: -1px 0 var(--label-stroke, #fff), 0 1px var(--label-stroke, #fff),
+    1px 0 var(--label-stroke, #fff), 0 -1px var(--label-stroke, #fff);
+  mix-blend-mode: hard-light;
+}
+
+@supports (
+  (text-stroke: 1px var(--label-stroke, #fff)) or
+    (-webkit-text-stroke: 1px var(--label-stroke, #fff))
+) {
+  .label {
+    -webkit-text-stroke: 1px var(--label-stroke, #fff);
+    text-stroke: 1px var(--label-stroke, #fff);
+    text-shadow: none;
+  }
 }
 
 .content__paragraph {
@@ -305,7 +343,7 @@
   line-height: 90%;
   padding: 14px 20px;
   min-width: 310px;
-  color: currentColor;
+  color: var(--accent-color, #000);
 }
 
 @media (376px <= width) {
@@ -344,6 +382,10 @@
   color: var(--bg-color, #fff);
 }
 
+.save__button-text {
+  display: inline-block;
+}
+
 .save__floppy {
   display: inline-block;
   min-width: 21px;
@@ -353,4 +395,81 @@
   margin-top: 2px;
   position: relative;
   z-index: 1;
+}
+
+.dialog {
+  width: 360px;
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+}
+
+.dialog__text {
+  display: inline-block;
+  font-family: var(--accent-font, monospace);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog[open] .dialog__memory {
+  display: flex;
+  gap: 20px;
+}
+
+.dialog__floppy {
+  width: 39px;
+  height: 39px;
+  display: inline-block;
+}
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: 30px;
+}
+
+.dialog__button {
+  min-width: 257px;
+  max-width: 293px;
+  outline: 2px solid var(--accent-color);
+  padding: 12px 130px;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.filter-contrast {
+  filter: contrast(55%);
+}
+
+.filter-sepia {
+  filter: sepia(10%);
+}
+
+.filter-grayscale {
+  filter: grayscale(20%);
+}
+
+.filter-saturate {
+  filter: saturate(125%);
+}
+
+.filter-invert {
+  filter: invert(15%);
+}
+
+.filter-brightness {
+  filter: brightness(110%);
+}
+
+.filter-br-op {
+  filter: brightness(90%) opacity(90%);
+}
+
+.filter-contr {
+  filter: contrast(95%);
 }
