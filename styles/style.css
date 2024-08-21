@@ -40,10 +40,6 @@
   cursor: pointer;
 }
 
-.button:focus-visible {
-  outline: 2px solid var(--accent-color, #000);
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -267,6 +263,13 @@
 .card__icon-button {
   color: var(--accent-color, #000);
   min-height: 36px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: var(--accent-font, monospace);
+  box-shadow: 0 0 0 0 var(--accent-color, #000);
+  transition: box-shadow 0.3s ease, color 1s ease;
+  overflow: hidden;
 }
 
 .card__icon-button:focus {
