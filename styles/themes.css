@@ -14,6 +14,31 @@
   --bg-image: url(../svg/pattern-light.svg);
   --heart-contour: #000000;
   --heart-sparks: #ff0000;
+
+  --bg-gradient-color: #d3d3d3;
+  --bg-gradient-flow-begin: #e7e7e7;
+  --bg-gradient-flow-end: #1a1a1a;
+  --label-color: #000000;
+  --label-stroke: #ffffff;
+  --button-color: #ffffff;
+  --bg-image-gradient: repeating-linear-gradient(
+      to right,
+      var(--bg-gradient-color, #d3d3d3),
+      var(--bg-gradient-color, #d3d3d3) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      var(--bg-gradient-color, #d3d3d3),
+      var(--bg-gradient-color, #d3d3d3) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(
+      var(--bg-gradient-flow-begin, #e7e7e7),
+      var(--bg-gradient-flow-begin, #e7e7e7) 0.01%,
+      var(--bg-gradient-flow-end, #1a1a1a)
+    );
 }
 
 .page.theme-dark {
@@ -25,6 +50,31 @@
   --bg-image: url(../svg/pattern-dark.svg);
   --heart-contour: #00cc14;
   --heart-sparks: #ff0000;
+
+  --bg-gradient-color: #000;
+  --bg-gradient-flow-begin: #007f0c;
+  --bg-gradient-flow-end: #004306;
+  --label-color: #00cc14;
+  --label-stroke: #000000;
+  --button-color: #00cc14;
+  --bg-image-gradient: repeating-linear-gradient(
+      to right,
+      var(--bg-gradient-color, #000),
+      var(--bg-gradient-color, #000) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      var(--bg-gradient-color, #000),
+      var(--bg-gradient-color, #000) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(
+      var(--bg-gradient-flow-begin, #007f0c),
+      var(--bg-gradient-flow-end),
+      #004306
+    );
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,5 +87,30 @@
     --bg-image: url(../svg/pattern-dark.svg);
     --heart-contour: #00cc14;
     --heart-sparks: #ff0000;
+
+    --bg-gradient-color: #000;
+    --bg-gradient-flow-begin: #007f0c;
+    --bg-gradient-flow-end: #004306;
+    --label-color: #00cc14;
+    --label-stroke: #000000;
+    --button-color: #00cc14;
+    --bg-image-gradient: repeating-linear-gradient(
+        to right,
+        var(--bg-gradient-color, #000),
+        var(--bg-gradient-color, #000) 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        var(--bg-gradient-color, #000),
+        var(--bg-gradient-color, #000) 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(
+        var(--bg-gradient-flow-begin, #007f0c),
+        var(--bg-gradient-flow-end),
+        #004306
+      );
   }
 }
