@@ -343,7 +343,7 @@
   line-height: 90%;
   padding: 14px 20px;
   min-width: 310px;
-  color: var(--button-color);
+  color: var(--accent-color, #000);
 }
 
 @media (376px <= width) {
@@ -443,11 +443,15 @@ dialog::backdrop {
 }
 
 .filter-contrast {
-  filter: contrast(85%);
+  filter: contrast(55%);
+}
+
+.filter-sepia {
+  filter: sepia(10%);
 }
 
 .filter-grayscale {
-  filter: grayscale(50%);
+  filter: grayscale(20%);
 }
 
 .filter-saturate {
@@ -460,10 +464,6 @@ dialog::backdrop {
 
 .filter-brightness {
   filter: brightness(110%);
-}
-
-.filter-sepia {
-  filter: sepia(10%);
 }
 
 .filter-br-op {
