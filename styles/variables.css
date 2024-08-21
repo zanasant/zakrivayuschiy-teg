@@ -11,4 +11,28 @@
   --width-card: clamp(320px, 100%, 700px);
   --heart-contour: #000000;
   --heart-sparks: #ff0000;
+  --bg-gradient-color: #d3d3d3;
+  --bg-gradient-flow-begin: #e7e7e7;
+  --bg-gradient-flow-end: #1a1a1a;
+  --label-color: #000000;
+  --label-stroke: #ffffff;
+  --button-color: #000;
+  --bg-image-gradient: repeating-linear-gradient(
+      to right,
+      var(--bg-gradient-color, #d3d3d3),
+      var(--bg-gradient-color, #d3d3d3) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      var(--bg-gradient-color, #d3d3d3),
+      var(--bg-gradient-color, #d3d3d3) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(
+      var(--bg-gradient-flow-begin, #e7e7e7),
+      var(--bg-gradient-flow-begin, #e7e7e7) 0.01%,
+      var(--bg-gradient-flow-end, #1a1a1a)
+    );
 }
