@@ -23,6 +23,7 @@
   color: var(--accent-color, #000);
   background-image: var(--bg-image-gradient);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .button {
@@ -472,4 +473,8 @@ dialog::backdrop {
 
 .filter-contr {
   filter: contrast(95%);
+}
+
+.dialog__button-text {
+  text-transform: uppercase;
 }

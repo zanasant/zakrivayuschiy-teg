@@ -573,8 +573,8 @@
           >
         </button>
         <dialog id="dialog-id" class="dialog">
-          <ul class="dialog__memory">
-            <li>
+          <div class="dialog__memory">
+            <div>
               <svg
                 class="dialog__floppy"
                 width="39px"
@@ -583,21 +583,18 @@
               >
                 <use href="./svg/floppy.svg#floppy"></use>
               </svg>
-            </li>
-            <li>
+            </div>
+            <div>
               <span class="dialog__text"
                 >Вставьте дискету,&nbsp;чтобы продолжить</span
               >
-            </li>
-          </ul>
-
-          <button
-            class="button dialog__button"
-            type="button"
-            onclick="window['dialog-id'].close()"
-          >
-            OK
-          </button>
+            </div>
+          </div>
+          <form method="dialog">
+            <button class="button dialog__button" type="submit">
+              <span class="dialog__button-text">ок</span>
+            </button>
+          </form>
         </dialog>
       </div>
     </main>
