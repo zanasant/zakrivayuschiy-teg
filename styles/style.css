@@ -23,6 +23,7 @@
   color: var(--accent-color, #000);
   background-image: var(--bg-image-gradient);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .button {
@@ -231,7 +232,6 @@
   }
 }
 
-
 .content__paragraph {
   font-family: var(--main-font, sans-serif);
   font-variation-settings: "wght" var(--text-weight, 400);
@@ -344,7 +344,7 @@
   line-height: 90%;
   padding: 14px 20px;
   min-width: 310px;
-  color: var(--button-color);
+  color: var(--accent-color, #000);
 }
 
 @media (376px <= width) {
@@ -444,11 +444,15 @@ dialog::backdrop {
 }
 
 .filter-contrast {
-  filter: contrast(85%);
+  filter: contrast(55%);
+}
+
+.filter-sepia {
+  filter: sepia(10%);
 }
 
 .filter-grayscale {
-  filter: grayscale(50%);
+  filter: grayscale(20%);
 }
 
 .filter-saturate {
@@ -463,14 +467,14 @@ dialog::backdrop {
   filter: brightness(110%);
 }
 
-.filter-sepia {
-  filter: sepia(10%);
-}
-
 .filter-br-op {
   filter: brightness(90%) opacity(90%);
 }
 
 .filter-contr {
   filter: contrast(95%);
+}
+
+.dialog__button-text {
+  text-transform: uppercase;
 }
